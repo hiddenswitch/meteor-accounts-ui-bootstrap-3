@@ -3,11 +3,17 @@
 <!--           -->
 <template name="_loginButtonsLoggedInDropdown">
   <li id="login-dropdown-list" class="dropdown">
-    <a class="dropdown-toggle"  data-toggle="dropdown">
-      {{displayName}}
-      <b class="caret"></b>
+    <a class="btn account dropdown-toggle"  data-toggle="dropdown">
+        <div class="avatar"><img src="assets/img/avatar.jpg" alt="Avatar"></div>
+        <div class="user">
+            <span class="hello">Welcome!</span>
+            <span class="name">{{displayName}}</span>
+        </div>
     </a>
-    <div class="dropdown-menu col-sm-3">
+    <ul class="dropdown-menu">
+        <li class="dropdown-menu-title">
+
+        </li>
       {{#if inMessageOnlyFlow}}
         {{> _loginButtonsMessages}}
       {{else}}
@@ -17,7 +23,7 @@
           {{> _loginButtonsLoggedInDropdownActions}}
         {{/if}}
       {{/if}}
-    </div>
+    </ul>
   </li>
 </template>
 
