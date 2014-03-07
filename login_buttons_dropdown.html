@@ -33,10 +33,10 @@
   {{/if}}
 
   {{#if allowChangingPassword}}
-    <button class="btn btn-default btn-block" id="login-buttons-open-change-password">Change password</button>
+    <li><a role="button" class="btn btn-default btn-block" id="login-buttons-open-change-password">Change password</a></li>
   {{/if}}
 
-  <button class="btn btn-block btn-primary" id="login-buttons-logout">Sign out</button>
+    <li><a role="button" class="btn btn-block btn-primary" id="login-buttons-logout">Sign out</a></li>
 </template>
 
 <!--            -->
@@ -86,13 +86,13 @@
     {{#each fields}}
       {{> _loginButtonsFormField}}
     {{/each}}
-    <button class="btn btn-primary col-sm-12" id="login-buttons-password" type="button">
+    <li><a role="button" class="btn btn-primary col-sm-12" id="login-buttons-password" type="button">
       {{#if inSignupFlow}}
         Create
       {{else}}
         Sign in
       {{/if}}
-    </button>
+    </a></li>
     {{#if inLoginFlow}}
       <div id="login-other-options">
       {{#if showForgotPasswordLink}}
@@ -115,13 +115,13 @@
     <div id="forgot-password-email-label-and-input"> {{! XXX we should probably use loginButtonsFormField }}
       <input id="forgot-password-email" type="email" placeholder="E-mail" class="form-control" />
     </div>
-    <button class="btn btn-primary login-button-form-submit col-sm-12" id="login-buttons-forgot-password">Reset password</button>
+      <li><a role="button" class="btn btn-primary login-button-form-submit col-sm-12" id="login-buttons-forgot-password">Reset password</a></li>
     {{> _loginButtonsBackToLoginLink}}
   </div>
 </template>
 
 <template name="_loginButtonsBackToLoginLink">
-    <button id="back-to-login-link" class="btn btn-default col-sm-12">Cancel</button>
+    <li><a role="button"  id="back-to-login-link" class="btn btn-default col-sm-12">Cancel</a></li>
 </template>
 
 <template name="_loginButtonsFormField">
@@ -135,6 +135,6 @@
   {{#each fields}}
     {{> _loginButtonsFormField}}
   {{/each}}
-  <button class="btn btn-primary" id="login-buttons-do-change-password">Change password</button>
-  <button class="btn btn-default login-close">Close</button>
+    <li><a role="button" class="btn btn-primary" id="login-buttons-do-change-password">Change password</a></li>
+    <li><a role="button" class="btn btn-default login-close">Close</a></li>
 </template>
